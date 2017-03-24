@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Kalle Pakarinen E-Koodi practice 2017-->
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- This scipts must be right order -->
+    <script type="text/javascript" src="libs/lodash.min.js"></script>
+    <script type="text/javascript" src="javascript.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="contact.js"></script>
+    <script type="text/javascript" src="contactStore.js"></script>
+</head>
+<body>
+<div class="container-fluid text-center">
+    <div class="col-sm-8 text-left">
+        <h1>Contact</h1>
+        <div class="form-group">
+            <ul>
+                <li><label>Firstname</label><input class="form-control" id="input-fn" type="text" name="" value=""></li>
+                <li><label>Lastname</label><input class="form-control" id="input-ln" type="text" name="" value=""></li>
+                <li><label>Phone</label><input class="form-control" id="input-phone" type="text" name="" value=""></li>
+                <li><label>Address</label><input class="form-control" id="input-address" type="text" name="" value=""></li>
+                <li><label>Save</label><button type="button" onclick="saveButton()" class="btn btn-info btn-block">Add</button></li>
+            </ul>
+        </div>
+        <div id="contact-people">
+            <h2>Henkilötiedot</h2>
+            <table class="table table-bordered">
+                <tbody id="myTable"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+document.getElementById("myTable").innerHTML = tableFill();
+</script>
+</html>
