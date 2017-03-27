@@ -2,14 +2,14 @@
  * Created by ekoodi on 20.3.2017.
  */
 ///get inputs and set values
-contactsApp.contact = function (firstName, lastName, phone, address) {
+contactsApp.contact = function (firstName, lastName, phone, address, city) {
     return {
         firstName: firstName,
         lastName: lastName,
         phone: phone,
-        address: address
+        address: address,
+        city: city
     }
-    console.log(this);
 };
 
 
