@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<form lang="en">
 <head>
     <!--Kalle Pakarinen E-Koodi practice 2017-->
     <meta charset="UTF-8">
     <title>Contact</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+
     <!-- This scipts must be right order -->
     <script type="text/javascript" src="libs/lodash.min.js"></script>
     <script type="text/javascript" src="javascript.js"></script>
@@ -16,29 +18,37 @@
     <script type="text/javascript" src="contact.js"></script>
     <script type="text/javascript" src="contactStore.js"></script>
 </head>
-<body>
-<div class="container-fluid text-center">
-    <div class="col-sm-8 text-left">
-        <h1>Contact</h1>
-        <div class="form-group">
-            <ul>
-                <li><label>Firstname</label><input class="form-control" id="input-fn" type="text" name="" value=""></li>
-                <li><label>Lastname</label><input class="form-control" id="input-ln" type="text" name="" value=""></li>
-                <li><label>Phone</label><input class="form-control" id="input-phone" type="text" name="" value=""></li>
-                <li><label>Address</label><input class="form-control" id="input-address" type="text" name="" value=""></li>
-                <li><label>Save</label><button type="button" onclick="saveButton()" class="btn btn-info btn-block">Add</button></li>
-            </ul>
+
+    <body onload="onLoadPage()">
+<div id="wrapper">
+    <h1>Contact</h1>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" id="input-fn" type="text" name="" value=""> <label class="mdl-textfield__label">Firstname</label>
         </div>
+    </br>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" id="input-ln" type="text" name="" value=""> <label class="mdl-textfield__label">Lastname</label></br>
+        </div>
+    </br>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+               <input class="mdl-textfield__input" id="input-phone" type="text" name="" value=""> <label class="mdl-textfield__label">Phone</label></br>
+        </div>
+    </br>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" id="input-address" type="text" name="" value=""><label class="mdl-textfield__label">Address</label></br>
+    </div>
+    </br>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" id="input-city" type="text" name="" value=""><label class="mdl-textfield__label">City</label></br>
+    </div>
+    </br>
+        <button type="button" onclick="saveButton()" class="mdl-button mdl-js-button mdl-button--raised">Add</button>
         <div id="contact-people">
             <h2>Contacts</h2>
-            <table class="table table-bordered">
+            <table class="mdl-data-table mdl-js-data-table">
                 <tbody id="myTable"></tbody>
             </table>
         </div>
-    </div>
 </div>
 </body>
-<script>
-document.getElementById("myTable").innerHTML = tableFill();
-</script>
 </html>
