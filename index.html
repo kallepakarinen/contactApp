@@ -18,31 +18,35 @@
     <script type="text/javascript" src="contact.js"></script>
     <script type="text/javascript" src="contactStore.js"></script>
 </head>
-
-    <body onload="onLoadPage()">
+    <body onload="loadPage()">
 <div id="wrapper">
+    <div id="divContact">
     <h1>Contact</h1>
+        <form id="inputsForm">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="mdl-textfield__input" id="input-fn" type="text" name="" value=""> <label class="mdl-textfield__label">Firstname</label>
         </div>
-    </br>
+    <br>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" id="input-ln" type="text" name="" value=""> <label class="mdl-textfield__label">Lastname</label></br>
+            <input class="mdl-textfield__input" id="input-ln" type="text" name="" value=""> <label class="mdl-textfield__label">Lastname</label>
         </div>
-    </br>
+    <br>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-               <input class="mdl-textfield__input" id="input-phone" type="text" name="" value=""> <label class="mdl-textfield__label">Phone</label></br>
+               <input class="mdl-textfield__input" id="input-phone" type="text" name="" value=""> <label class="mdl-textfield__label">Phone</label>
         </div>
-    </br>
+    <br>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" id="input-address" type="text" name="" value=""><label class="mdl-textfield__label">Address</label></br>
+        <input class="mdl-textfield__input" id="input-address" type="text" name="" value=""><label class="mdl-textfield__label">Address</label>
     </div>
-    </br>
+    <br>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" id="input-city" type="text" name="" value=""><label class="mdl-textfield__label">City</label></br>
+        <input class="mdl-textfield__input" id="input-city" type="text" name="" value=""><label class="mdl-textfield__label">City</label>
     </div>
-    </br>
+
+    <br>
         <button type="button" onclick="saveButton()" class="mdl-button mdl-js-button mdl-button--raised">Add</button>
+    </div>
+</form>
         <div id="contact-people">
             <h2>Contacts</h2>
             <table class="mdl-data-table mdl-js-data-table">
